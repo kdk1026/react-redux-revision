@@ -14,6 +14,11 @@ function numberReducer(state = initialState, action) {
                 ...state,
                 number: state.number - 1
             }
+        case 'AMOUNT':
+            return {
+                ...state,
+                number: state.number + Number(action.payload)
+            }
     
         default:
             return state;

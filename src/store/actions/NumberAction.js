@@ -6,4 +6,8 @@ function decreaseNumber(dispatch) {
     dispatch({ type: 'MINUS' });
 }
 
-export const numberAction = { increaseNumber, decreaseNumber };
+function incrementByAmount(dispatch, amount) {
+    dispatch({ type: 'AMOUNT', payload: amount });
+}
+
+export const numberAction = { increaseNumber, decreaseNumber, incrementByAmount };
